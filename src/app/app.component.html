@@ -1,0 +1,13 @@
+<div style="text-align: center;margin: 20%;">
+  <input type="submit" (click)="pressed()" value="Click Me">
+  <br>
+  <span style="color: red;font-size: 300px;">{{counter}}</span>
+</div>
+<ng-template [ngIf]="counter > 5" [ngIfElse]="none">
+  <p>
+    Counter is greater than 5
+  </p>
+</ng-template>
+<ng-template #none>
+  <p>not greater than 5</p>
+</ng-template>
